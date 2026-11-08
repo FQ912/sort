@@ -57,7 +57,10 @@ def main() -> None:
     """Точка входа утилиты."""
     args = _parse_args()
 
-    if args.visualize:
+    # ВАЖНО: проверяем именно is not None, чтобы --visualize 0 не игнорировался
+    if args.visualize is not None:
+        if args.visualize <= 0:
+            raise SystemExit("размер для визуализации должен быть больше 0")
         my_sort.visualize_sort(args.visualize, args.algorithm, args.reverse)
         return
 
