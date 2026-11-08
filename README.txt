@@ -19,8 +19,13 @@
 
 Шаг 7. CLI
 
-    python main.py --input nums.txt --numbers --algorithm quick --  output out.txt
+    python main.py --input nums.txt --numbers --algorithm quick --output out.txt
     type out.txt
 
     python main.py --input words.txt --reverse --algorithm tim
     python main.py --visualize 8 --algorithm merge
+Шаг 8. Проверка граничных случаев
+
+    python main.py --visualize 0
+
+    python main.py --visualize 5 --algorithm quick
